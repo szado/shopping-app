@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "/Oww5Q6zqxL2osMZL6R06JdVS3a6NMtgUJ7U9gsP2ARYhnKcOitO6jqT0n7LDYWRX4muY8SlgF94tgfJQL+LYg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\root\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\root\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\root\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\root\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\root\\.nuget\\packages\\xamarin.essentials\\1.2.0\\xamarin.essentials.1.2.0.nupkg.sha512",
+    "C:\\Users\\root\\.nuget\\packages\\xamarin.forms\\4.2.0.709249\\xamarin.forms.4.2.0.709249.nupkg.sha512"
+  ],
+  "logs": []
+}

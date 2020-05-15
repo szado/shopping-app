@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.Android\\ShoppingApp.Android.csproj": {}
+    "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp.Android\\ShoppingApp.Android.csproj": {}
   },
   "projects": {
-    "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.Android\\ShoppingApp.Android.csproj": {
+    "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp.Android\\ShoppingApp.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.Android\\ShoppingApp.Android.csproj",
+        "projectUniqueName": "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp.Android\\ShoppingApp.Android.csproj",
         "projectName": "ShoppingApp.Android",
-        "projectPath": "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.Android\\ShoppingApp.Android.csproj",
-        "packagesPath": "C:\\Users\\Szado\\.nuget\\packages\\",
-        "outputPath": "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.Android\\obj\\",
+        "projectPath": "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp.Android\\ShoppingApp.Android.csproj",
+        "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Szado\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj": {
-                "projectPath": "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj"
+              "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj": {
+                "projectPath": "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "Xamarin.Android.Support.Core.Utils": {
               "target": "Package",
               "version": "[28.0.0.1, )"
@@ -58,21 +62,20 @@
         }
       }
     },
-    "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj": {
+    "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj",
+        "projectUniqueName": "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj",
         "projectName": "ShoppingApp",
-        "projectPath": "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj",
-        "packagesPath": "C:\\Users\\Szado\\.nuget\\packages\\",
-        "outputPath": "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp\\obj\\",
+        "projectPath": "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj",
+        "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Szado\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -103,6 +106,10 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.2.0, )"
@@ -122,7 +129,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
