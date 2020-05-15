@@ -10,7 +10,8 @@ namespace ShoppingApp.Services
     {
         public Dictionary<string, object> routes = new Dictionary<string, object>
         {
-            { "categories", new Test }
+            { "categories", new Category{ } },
+            { "offer", new Offer{ } }
         };
     }
 }
