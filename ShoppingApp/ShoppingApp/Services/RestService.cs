@@ -4,16 +4,12 @@ using System.Text;
 using System.Net.Http;
 using ShoppingApp.Models;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ShoppingApp.Services
 {
-    class RestService
+    public class RestService
     {
-        /*        public Dictionary<string, object> routes = new Dictionary<string, object>
-                {
-                    { "categories", new Test }
-                };*/
-
         protected HttpService HttpService;
 
         public RestService(HttpService httpService)
@@ -21,9 +17,10 @@ namespace ShoppingApp.Services
             this.HttpService = httpService;
         }
 
-        public Task GetOffers()
+        public async Task<List<Offer>> GetOffers()
         {
-            return HttpService.GetHttpTask("offers");
+            HttpResponseMessage httpResponse = await HttpService.GetHttpTask("offers");
+            return JsonConvert.DeserializeObject(httpResponse.Content.ToString()) as List<Offer>;
         }
     }
 }

@@ -1953,24 +1953,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\root\\.nuget\\packages\\": {},
+    "C:\\Users\\Szado\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp.Android\\ShoppingApp.Android.csproj",
+      "projectUniqueName": "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.Android\\ShoppingApp.Android.csproj",
       "projectName": "ShoppingApp.Android",
-      "projectPath": "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp.Android\\ShoppingApp.Android.csproj",
-      "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp.Android\\obj\\",
+      "projectPath": "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.Android\\ShoppingApp.Android.csproj",
+      "packagesPath": "C:\\Users\\Szado\\.nuget\\packages\\",
+      "outputPath": "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Szado\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1984,8 +1984,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj": {
-              "projectPath": "C:\\Users\\root\\Desktop\\workbench\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj"
+            "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj": {
+              "projectPath": "G:\\Projekty\\shopping-app\\ShoppingApp\\ShoppingApp\\ShoppingApp\\ShoppingApp.csproj"
             }
           }
         }
