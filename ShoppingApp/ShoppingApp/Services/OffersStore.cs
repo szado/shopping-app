@@ -9,7 +9,6 @@ namespace ShoppingApp.Services
 {
     public class OffersStore : IDataStore<Offer>
     {
-        readonly List<Offer> items = new List<Offer>();
         protected ApiService apiService;
 
         public OffersStore(ApiService apiService)
