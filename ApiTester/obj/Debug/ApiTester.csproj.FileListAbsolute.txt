@@ -1,0 +1,11 @@
+G:\Projekty\shopping-app\ShoppingApp\ApiTester\bin\Debug\ApiTester.exe.config
+G:\Projekty\shopping-app\ShoppingApp\ApiTester\bin\Debug\ApiTester.exe
+G:\Projekty\shopping-app\ShoppingApp\ApiTester\bin\Debug\ApiTester.pdb
+G:\Projekty\shopping-app\ShoppingApp\ApiTester\obj\Debug\ApiTester.csprojAssemblyReference.cache
+G:\Projekty\shopping-app\ShoppingApp\ApiTester\obj\Debug\ApiTester.exe
+G:\Projekty\shopping-app\ShoppingApp\ApiTester\obj\Debug\ApiTester.pdb
+G:\Projekty\shopping-app\ShoppingApp\ApiTester\bin\Debug\ShoppingApp.dll
+G:\Projekty\shopping-app\ShoppingApp\ApiTester\bin\Debug\ShoppingApp.pdb
+G:\Projekty\shopping-app\ShoppingApp\ApiTester\obj\Debug\ApiTester.csproj.CopyComplete
+G:\Projekty\shopping-app\ShoppingApp\ApiTester\bin\Debug\Newtonsoft.Json.dll
+G:\Projekty\shopping-app\ShoppingApp\ApiTester\bin\Debug\Newtonsoft.Json.xml

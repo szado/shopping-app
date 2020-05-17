@@ -1,18 +1,22 @@
 ﻿using System;
-using System.Text;
 using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace ShoppingApp.Services
 {
-    public class HttpService
+    public class ApiService
     {
         protected const string API_URL = "https://shop-api.hubek.pl/api";
-        protected HttpClient client = new HttpClient();
+        protected HttpClient httpClient;
 
-        public Task<HttpResponseMessage> GetHttpTask(string resourceUri)
+        public ApiService(HttpClient httpClient)
         {
-            return this.client.GetAsync(
+            this.httpClient = httpClient;
+        }
+
+        public Task<string> GetAsync(string resourceUri)
+        {
+            return httpClient.GetStringAsync(
                 new Uri(this.getFullResourceUrl(resourceUri))
             );
         }

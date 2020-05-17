@@ -17,7 +17,7 @@ namespace ShoppingApp
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            DependencyService.Register<OffersStore>();
             MainPage = new MainPage();
         }
 

@@ -13,7 +13,7 @@ namespace ShoppingApp.Models
         public string price { get; set; }
         public string created_at { get; set; }
         public string updated_at { get; set; }
-        public Dictionary<string, string> customer { get; set; }
-        public Dictionary<string, string> category { get; set; }
+        public Customer customer { get; set; }
+        public Category category { get; set; }
     }
 }
