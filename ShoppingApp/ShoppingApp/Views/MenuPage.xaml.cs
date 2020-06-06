@@ -1,4 +1,5 @@
 ﻿using ShoppingApp.Models;
+using ShoppingApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,29 +13,37 @@ namespace ShoppingApp.Views
     [DesignTimeVisible(false)]
     public partial class MenuPage : ContentPage
     {
-        MainPage RootPage { get => Application.Current.MainPage as MainPage; }
-        List<HomeMenuItem> menuItems;
+        MenuViewModel viewModel;
         public MenuPage()
         {
             InitializeComponent();
 
-            menuItems = new List<HomeMenuItem>
-            {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
-            };
+            BindingContext = viewModel = new MenuViewModel();
+        }
 
-            ListViewMenu.ItemsSource = menuItems;
+        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            var item = args.SelectedItem as Item;
+            if (item == null)
+                return;
 
-            ListViewMenu.SelectedItem = menuItems[0];
-            ListViewMenu.ItemSelected += async (sender, e) =>
-            {
-                if (e.SelectedItem == null)
-                    return;
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
 
-                var id = (int)((HomeMenuItem)e.SelectedItem).Id;
-                await RootPage.NavigateFromMenu(id);
-            };
+            // Manually deselect item.
+            ItemsListView.SelectedItem = null;
+        }
+
+        async void AddItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (viewModel.Categories.Count == 0)
+                viewModel.LoadItemsCommand.Execute(null);
         }
     }
 }
