@@ -6,11 +6,11 @@ namespace ShoppingApp.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel<Offer>
     {
-        public Item Item { get; set; }
-        public ItemDetailViewModel(Item item = null)
+        public Offer Offer { get; set; }
+        public ItemDetailViewModel(Offer offer = null)
         {
-            Title = item?.Text;
-            Item = item;
+            Title = offer?.title;
+            Offer = offer;
         }
     }
 }

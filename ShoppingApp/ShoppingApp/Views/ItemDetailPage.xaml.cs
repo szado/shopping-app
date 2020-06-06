@@ -26,10 +26,10 @@ namespace ShoppingApp.Views
         {
             InitializeComponent();
 
-            var item = new Item
+            var item = new Offer
             {
-                Text = "Item 1",
-                Description = "This is an item description."
+                title = "Pobieram ofertę...",
+                description = "Pobieram opis oferty..."
             };
 
             viewModel = new ItemDetailViewModel(item);

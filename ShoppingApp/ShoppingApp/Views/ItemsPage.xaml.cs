@@ -29,13 +29,14 @@ namespace ShoppingApp.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Item;
-            if (item == null)
+            var offer = args.SelectedItem as Offer;
+
+            if (offer == null)
+            {
                 return;
+            }
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
-
-            // Manually deselect item.
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(offer)));
             ItemsListView.SelectedItem = null;
         }
 

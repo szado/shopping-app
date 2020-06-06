@@ -21,7 +21,6 @@ namespace ShoppingApp.ViewModels
             Offers = new ObservableCollection<Offer>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
             DataStore = new OffersStore(new ApiService(new System.Net.Http.HttpClient()));
-            ExecuteLoadItemsCommand();
 
 /*            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
             {
