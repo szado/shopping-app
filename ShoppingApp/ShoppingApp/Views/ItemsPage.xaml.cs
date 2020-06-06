@@ -48,7 +48,7 @@ namespace ShoppingApp.Views
         {
             base.OnAppearing();
 
-            if (viewModel.Items.Count == 0)
+            if (viewModel.Offers.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
         }
     }

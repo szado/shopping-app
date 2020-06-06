@@ -5,26 +5,30 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using ShoppingApp.Models;
 using ShoppingApp.Views;
+using ShoppingApp.Services;
 
 namespace ShoppingApp.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class ItemsViewModel : BaseViewModel<Offer>
     {
-        public ObservableCollection<Item> Items { get; set; }
+        public ObservableCollection<Offer> Offers { get; set; }
         public Command LoadItemsCommand { get; set; }
+        public OffersStore DataStore;
 
         public ItemsViewModel()
         {
             Title = "Oferty";
-            Items = new ObservableCollection<Item>();
+            Offers = new ObservableCollection<Offer>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            DataStore = new OffersStore(new ApiService(new System.Net.Http.HttpClient()));
+            ExecuteLoadItemsCommand();
 
-            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
+/*            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
             {
                 var newItem = item as Item;
                 Items.Add(newItem);
                 await DataStore.AddItemAsync(newItem);
-            });
+            });*/
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -36,11 +40,11 @@ namespace ShoppingApp.ViewModels
 
             try
             {
-                Items.Clear();
+                Offers.Clear();
                 var items = await DataStore.GetItemsAsync(true);
                 foreach (var item in items)
                 {
-                    Items.Add(item);
+                    Offers.Add(item);
                 }
             }
             catch (Exception ex)

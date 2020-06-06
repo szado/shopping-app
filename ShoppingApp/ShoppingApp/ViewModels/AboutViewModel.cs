@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Windows.Input;
+using ShoppingApp.Models;
 
 using Xamarin.Forms;
 
 namespace ShoppingApp.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class AboutViewModel : BaseViewModel<Offer>
     {
         public AboutViewModel()
         {

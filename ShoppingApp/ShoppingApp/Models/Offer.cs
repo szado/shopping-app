@@ -15,5 +15,10 @@ namespace ShoppingApp.Models
         public string updated_at { get; set; }
         public Customer customer { get; set; }
         public Category category { get; set; }
+
+        public override string ToString()
+        {
+            return this.title;
+        }
     }
 }
