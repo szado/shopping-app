@@ -12,12 +12,19 @@ namespace ShoppingApp
 {
     public partial class App : Application
     {
+        public HttpClient HttpClient
+        {
+            get => httpClient;
+            set { }
+        }
+
+        private HttpClient httpClient = new HttpClient();
 
         public App()
         {
             InitializeComponent();
-
             DependencyService.Register<OffersStore>();
+            DependencyService.Register<HttpClient>();
             MainPage = new MainPage();
         }
 

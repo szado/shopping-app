@@ -20,7 +20,7 @@ namespace ShoppingApp.ViewModels
         {
             Categories = new ObservableCollection<Category>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
-            DataStore = new CategoryStore(new ApiService(new HttpClient()));
+            DataStore = new CategoryStore(new ApiService(DependencyService.Get<HttpClient>()));
         }
 
         async Task ExecuteLoadItemsCommand()
