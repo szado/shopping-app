@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using ShoppingApp.Models;
 using ShoppingApp.Views;
 using ShoppingApp.Services;
+using System.Net.Http;
 
 namespace ShoppingApp.ViewModels
 {
@@ -19,7 +20,7 @@ namespace ShoppingApp.ViewModels
         {
             Categories = new ObservableCollection<Category>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
-            DataStore = new CategoryStore(new ApiService(new System.Net.Http.HttpClient()));
+            DataStore = new CategoryStore(new ApiService(new HttpClient()));
         }
 
         async Task ExecuteLoadItemsCommand()

@@ -38,7 +38,8 @@ namespace ShoppingApp.Services
 
         public async Task<List<Category>> GetItemsAsync(bool forceRefresh = false)
         {
-            string response = await apiService.GetAsync("categories");
+            const string endpoint = "categories";
+            string response = await apiService.GetAsync(endpoint);
 
             var categories = JsonConvert.DeserializeObject<DataArrayApiResponse<Category>>(response);
 

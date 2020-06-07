@@ -14,6 +14,8 @@ namespace ShoppingApp.Views
     public partial class MenuPage : ContentPage
     {
         MenuViewModel viewModel;
+        MainPage RootPage { get => Application.Current.MainPage as MainPage; }
+
         public MenuPage()
         {
             InitializeComponent();
@@ -24,18 +26,14 @@ namespace ShoppingApp.Views
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             var item = args.SelectedItem as Category;
+
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemsPage());
+            await RootPage.NavigateFromMenu(1);
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;
-        }
-
-        async void AddItem_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
         }
 
         protected override void OnAppearing()

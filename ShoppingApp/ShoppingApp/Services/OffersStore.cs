@@ -36,6 +36,16 @@ namespace ShoppingApp.Services
             throw new NotImplementedException();
         }
 
+        public async Task<List<Offer>> GetItemsAsync(bool forceRefresh = false, int? categoryId = null)
+        {
+            string endpoint = categoryId != null ? $"offers/{categoryId}" : "offers";
+            string response = await apiService.GetAsync(endpoint);
+
+            var offers = JsonConvert.DeserializeObject<DataArrayApiResponse<Offer>>(response);
+
+            return new List<Offer>(offers.data);
+        }
+
         public async Task<List<Offer>> GetItemsAsync(bool forceRefresh = false)
         {
             string response = await apiService.GetAsync("offers");
