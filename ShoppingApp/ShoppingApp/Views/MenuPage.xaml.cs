@@ -30,14 +30,8 @@ namespace ShoppingApp.Views
             if (item == null)
                 return;
 
-            //await RootPage.NavigateFromMenu(1);
-            //await Navigation.PushAsync(new NavigationPage(new ItemsPage()));
-
-/*            await ((MainPage)App.Current.MainPage).Detail.Navigation.PopToRootAsync();
-            await ((MainPage)App.Current.MainPage).Detail.Navigation.PopModalAsync();*/
-            await ((MainPage)App.Current.MainPage).Detail.Navigation.PushAsync(new ItemsPage());
-
-            // Manually deselect item.
+            RootPage.IsPresented = false;
+            await RootPage.Detail.Navigation.PushAsync(new ItemsPage());
             ItemsListView.SelectedItem = null;
         }
 
