@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using ShoppingApp.Models;
 using ShoppingApp.Views;
 using ShoppingApp.Services;
+using System.Net.Http;
 
 namespace ShoppingApp.ViewModels
 {
@@ -20,7 +21,7 @@ namespace ShoppingApp.ViewModels
             Title = "Oferty";
             Offers = new ObservableCollection<Offer>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
-            DataStore = new OffersStore(new ApiService(new System.Net.Http.HttpClient()));
+            DataStore = new OffersStore(new ApiService(DependencyService.Get<HttpClient>()));
 
 /*            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
             {
