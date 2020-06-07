@@ -31,7 +31,7 @@ namespace ShoppingApp.Views
                 return;
 
             RootPage.IsPresented = false;
-            await RootPage.Detail.Navigation.PushAsync(new ItemsPage());
+            await RootPage.Detail.Navigation.PushAsync(new ItemsPage(item));
             ItemsListView.SelectedItem = null;
         }
 

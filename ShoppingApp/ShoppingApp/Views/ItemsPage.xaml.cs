@@ -27,6 +27,13 @@ namespace ShoppingApp.Views
             BindingContext = viewModel = new ItemsViewModel();
         }
 
+        public ItemsPage(Category category)
+        {
+            InitializeComponent();
+
+            BindingContext = viewModel = new ItemsViewModel(category);
+        }
+
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             var offer = args.SelectedItem as Offer;

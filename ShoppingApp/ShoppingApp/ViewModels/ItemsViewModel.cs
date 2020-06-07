@@ -15,6 +15,15 @@ namespace ShoppingApp.ViewModels
         public Command LoadItemsCommand { get; set; }
         public OffersStore DataStore;
 
+        public ItemsViewModel(Category category)
+        {
+            Title = category.name;
+            int categoryId = Int32.Parse(category.id);
+            Offers = new ObservableCollection<Offer>();
+            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand(categoryId));
+            DataStore = new OffersStore(new ApiService(new System.Net.Http.HttpClient()));
+        }
+
         public ItemsViewModel()
         {
             Title = "Oferty";
@@ -30,7 +39,7 @@ namespace ShoppingApp.ViewModels
             });*/
         }
 
-        async Task ExecuteLoadItemsCommand()
+        async Task ExecuteLoadItemsCommand(int? categoryId = null)
         {
             if (IsBusy)
                 return;
@@ -40,7 +49,9 @@ namespace ShoppingApp.ViewModels
             try
             {
                 Offers.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+
+                var items = await DataStore.GetItemsAsync(true, categoryId);
+
                 foreach (var item in items)
                 {
                     Offers.Add(item);

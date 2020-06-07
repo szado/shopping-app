@@ -1,0 +1,12 @@
+C:\Users\root\Desktop\workbench\shopping-app\ApiTester\obj\Debug\ApiTester.csprojAssemblyReference.cache
+C:\Users\root\Desktop\workbench\shopping-app\ApiTester\obj\Debug\ApiTester.csproj.CoreCompileInputs.cache
+C:\Users\root\Desktop\workbench\shopping-app\ApiTester\bin\Debug\ApiTester.exe.config
+C:\Users\root\Desktop\workbench\shopping-app\ApiTester\bin\Debug\ApiTester.exe
+C:\Users\root\Desktop\workbench\shopping-app\ApiTester\bin\Debug\ApiTester.pdb
+C:\Users\root\Desktop\workbench\shopping-app\ApiTester\bin\Debug\Newtonsoft.Json.dll
+C:\Users\root\Desktop\workbench\shopping-app\ApiTester\bin\Debug\ShoppingApp.dll
+C:\Users\root\Desktop\workbench\shopping-app\ApiTester\bin\Debug\ShoppingApp.pdb
+C:\Users\root\Desktop\workbench\shopping-app\ApiTester\bin\Debug\Newtonsoft.Json.xml
+C:\Users\root\Desktop\workbench\shopping-app\ApiTester\obj\Debug\ApiTester.csproj.CopyComplete
+C:\Users\root\Desktop\workbench\shopping-app\ApiTester\obj\Debug\ApiTester.exe
+C:\Users\root\Desktop\workbench\shopping-app\ApiTester\obj\Debug\ApiTester.pdb
