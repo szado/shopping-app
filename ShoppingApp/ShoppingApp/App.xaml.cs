@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using ShoppingApp.Services;
 using ShoppingApp.Views;
 using System.Net.Http;
-using Newtonsoft.Json;
-using ShoppingApp.Models;
 
 namespace ShoppingApp
 {
@@ -17,8 +14,14 @@ namespace ShoppingApp
             get => httpClient;
             set { }
         }
+        public DatabaseService Database
+        {
+            get => db;
+            set { }
+        }
 
         private HttpClient httpClient = new HttpClient();
+        private DatabaseService db = new DatabaseService();
 
         public App()
         {
