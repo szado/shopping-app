@@ -5,11 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ShoppingApp.Views.NewItemPage"
-             Title="New Item">
+             Title="Koszyk">
     
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+        <ToolbarItem Text="X"  Clicked="Cancel_Clicked" />
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>

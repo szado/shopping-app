@@ -7,41 +7,49 @@
              x:Class="ShoppingApp.Views.ItemDetailPage"
              Title="{Binding Offer.title}">
 
-    <StackLayout Spacing="20" Padding="15">
-        <Label Text="Informacje podstawowe" FontSize="Title" />
-        <Label FontSize="Body">
-            <Label.FormattedText>
-                <FormattedString>
-                    <Span FontAttributes="Bold" Text="Kategoria: "/>
-                    <Span Text="{Binding Offer.category.name}" />
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-        <Label FontSize="Body">
-            <Label.FormattedText>
-                <FormattedString>
-                    <Span FontAttributes="Bold" Text="Sprzedający: "/>
-                    <Span Text="{Binding Offer.customer.nickname}" />
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-        <Label FontSize="Body">
-            <Label.FormattedText>
-                <FormattedString>
-                    <Span FontAttributes="Bold" Text="Cena: "/>
-                    <Span Text="{Binding Offer.price}" />
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-        <Label FontSize="Body">
-            <Label.FormattedText>
-                <FormattedString>
-                    <Span FontAttributes="Bold" Text="Data dodania: "/>
-                    <Span Text="{Binding Offer.created_at}" />
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-        <Label Text="Opis oferty" FontSize="Title" />
-        <Label Text="{Binding Offer.description}" d:Text="Item description" FontSize="Body"/>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="15" >
+            <Label Text="Informacje podstawowe" FontSize="Title" />
+            <Label FontSize="Body">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontAttributes="Bold" Text="Kategoria: "/>
+                        <Span Text="{Binding Offer.category.name}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontSize="Body">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontAttributes="Bold" Text="Sprzedający: "/>
+                        <Span Text="{Binding Offer.customer.nickname}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontSize="Body">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontAttributes="Bold" Text="Cena: "/>
+                        <Span Text="{Binding Offer.price}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontSize="Body">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontAttributes="Bold" Text="Data dodania: "/>
+                        <Span Text="{Binding Offer.created_at}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="Opis oferty" FontSize="Title" />
+            <Label Text="{Binding Offer.description}" d:Text="Item description" FontSize="Body"/>
+            <Button 
+                BackgroundColor="#0099F3"
+                TextColor="White"
+                Text="Dodaj do koszyka" 
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
