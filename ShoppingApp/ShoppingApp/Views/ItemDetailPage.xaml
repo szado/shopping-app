@@ -45,6 +45,7 @@
             <Label Text="Opis oferty" FontSize="Title" />
             <Label Text="{Binding Offer.description}" d:Text="Item description" FontSize="Body"/>
             <Button 
+                Clicked="AddToClicked"
                 BackgroundColor="#0099F3"
                 TextColor="White"
                 Text="Dodaj do koszyka" 

@@ -35,5 +35,14 @@ namespace ShoppingApp.Views
             viewModel = new ItemDetailViewModel(item);
             BindingContext = viewModel;
         }
+
+        private void AddToClicked(object sender, EventArgs e)
+        {
+            DisplayAlert(
+                "Informacja", 
+                viewModel.AddToCart() ? $"Dodałeś do koszyka {viewModel.Offer.title}." : "Nie udało się dodać produktu do koszyka.",
+                "OK"
+            );
+        }
     }
 }

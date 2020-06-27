@@ -21,7 +21,7 @@ namespace ShoppingApp.Services
         public DatabaseService()
         {
             connection = new SQLiteConnection(getPath(), SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create | SQLiteOpenFlags.FullMutex);
-            connection.CreateTable<Stock>();
+            connection.CreateTable<Cart>();
         }
 
         private string getPath()
