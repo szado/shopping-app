@@ -14,9 +14,9 @@ namespace ShoppingApp.ViewModels
             Offer = offer;
         }
 
-        public bool AddToCart()
+        public bool AddToCart(int quantity)
         {
-            return new CartService((App.Current as App).Database).AddToCart(Offer);
+            return new CartService((App.Current as App).Database).AddToCart(Offer, quantity);
         }
     }
 }

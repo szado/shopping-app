@@ -15,7 +15,7 @@ namespace ShoppingApp.Services
             this.database = database;
         }
 
-        public bool AddToCart(Offer offer, int quantity = 1)
+        public bool AddToCart(Offer offer, int quantity)
         {
             var cartItem = GetCartItemByOffer(offer);
 
@@ -42,7 +42,7 @@ namespace ShoppingApp.Services
             }
             else
             {
-                cartItem.Quantity++;
+                cartItem.Quantity += quantity;
                 return database.Connection.Update(cartItem) > 0;
             }
         }

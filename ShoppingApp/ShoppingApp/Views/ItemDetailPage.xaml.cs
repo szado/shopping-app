@@ -38,11 +38,20 @@ namespace ShoppingApp.Views
 
         private void AddToClicked(object sender, EventArgs e)
         {
-            DisplayAlert(
-                "Informacja", 
-                viewModel.AddToCart() ? $"Dodałeś do koszyka {viewModel.Offer.title}." : "Nie udało się dodać produktu do koszyka.",
-                "OK"
-            );
+            int quantity;
+            string message;
+
+            if (int.TryParse(quantityInput.Text, out quantity) && quantity > 0)
+            {
+                message = viewModel.AddToCart(quantity) ? $"Dodałeś do koszyka {viewModel.Offer.title}." : "Nie udało się dodać produktu do koszyka.";
+            } 
+            else
+            {
+                message = "Niepoprawna ilość produktu";
+            }
+
+            DisplayAlert("Informacja", message, "OK");
+            quantityInput.Text = "1";
         }
     }
 }
