@@ -1,7 +1,7 @@
 ﻿using System;
 
 using ShoppingApp.Models;
-using ShoppingApp.Models.Database;
+using ShoppingApp.Services;
 
 namespace ShoppingApp.ViewModels
 {
@@ -16,25 +16,7 @@ namespace ShoppingApp.ViewModels
 
         public bool AddToCart()
         {
-            var app = App.Current as App;
-            var cartItem = new Cart()
-            {
-                Quantity = 1,
-                RemoteItemId = Offer.id,
-                Name = Offer.title,
-                Price = float.Parse(Offer.price),
-            };
-
-            try
-            {
-                app.Database.Connection.Insert(cartItem);
-            } 
-            catch
-            {
-                return false;
-            }
-
-            return true;
+            return new CartService((App.Current as App).Database).AddToCart(Offer);
         }
     }
 }
