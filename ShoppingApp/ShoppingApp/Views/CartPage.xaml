@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ShoppingApp.Views.CartPage"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="X" Clicked="Cart_Close"/>
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="MyListView"
+            ItemsSource="{Binding Items}"
+            ItemTapped="Handle_ItemTapped"
+            CachingStrategy="RecycleElement">
+        <!--Built in Cells-->
+        <!--
+
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <TextCell Text="{Binding Name}" d:Text="{Binding Name}" />
+            </DataTemplate>
+    </ListView.ItemTemplate>
+        -->
+    
+    <!--Custom View Cells-->
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Label Text="{Binding Name}" 
+                            FontAttributes="Bold"
+                            Style="{DynamicResource ListItemTextStyle}" />
+                        <Label Text="{Binding Price}"
+                            d:Text="Detail"
+                            Style="{DynamicResource ListItemDetailTextStyle}"/>
+                        <Button Text="Usuń" 
+                               Clicked="Cart_RemoveItem" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

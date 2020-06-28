@@ -5,8 +5,8 @@ using SQLite;
 
 namespace ShoppingApp.Models.Database
 {
-    [Table("Stock")]
-    class Cart
+    [Table("Cart")]
+    public class Cart
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

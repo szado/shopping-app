@@ -7,27 +7,24 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using ShoppingApp.Models.Database;
+using ShoppingApp.ViewModels;
+
 namespace ShoppingApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ListViewPage1 : ContentPage
+    public partial class CartPage : ContentPage
     {
-        public ObservableCollection<string> Items { get; set; }
+        CartViewModel viewModel;
 
-        public ListViewPage1()
+
+        public CartPage()
         {
             InitializeComponent();
 
-            Items = new ObservableCollection<string>
-            {
-                "Item 1",
-                "Item 2",
-                "Item 3",
-                "Item 4",
-                "Item 5"
-            };
+            BindingContext = viewModel = new CartViewModel();
 
-            MyListView.ItemsSource = Items;
+            //MyListView.ItemsSource = Items;
         }
 
         async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -39,6 +36,16 @@ namespace ShoppingApp.Views
 
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
+        }
+
+        async void Cart_RemoveItem(object sender, EventArgs e)
+        {
+            await DisplayAlert("Usuwanie", "Przedmiot usunięty", "OK");
+        }
+
+        async void Cart_Close(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
         }
     }
 }
