@@ -19,5 +19,10 @@ namespace ShoppingApp.ViewModels
             var app = App.Current as App;
             Items = app.Database.Connection.Table<Cart>();
         }
+        
+        public bool RemoveCartItem(int cartItemId)
+        {
+            return new CartService((App.Current as App).Database).RemoveFromCart(cartItemId);
+        }
     }
 }

@@ -10,13 +10,13 @@
         <ToolbarItem Text="X" Clicked="Cart_Close"/>
     </ContentPage.ToolbarItems>
     
-    <ListView x:Name="listView"
+    <ListView x:Name="cartListView"
             ItemsSource="{Binding Items}"
-            ItemTapped="Handle_ItemTapped"
-            CachingStrategy="RecycleElement" RowHeight="75">
+            CachingStrategy="RecycleElement" 
+            RowHeight="75">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <ViewCell >
+                <ViewCell>
                     <StackLayout Orientation="Vertical">
                         <Label Text="{Binding Name}"
                                Margin="10, 2"
@@ -43,6 +43,7 @@
                                 </Label.FormattedText>
                             </Label>
                             <Button Text="Usuń"
+                                    CommandParameter="{Binding Id}"
                                     Margin="10"
                                     HorizontalOptions="End"
                                     HeightRequest="30"

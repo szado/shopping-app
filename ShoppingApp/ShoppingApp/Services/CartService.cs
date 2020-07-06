@@ -47,6 +47,35 @@ namespace ShoppingApp.Services
             }
         }
 
+        public bool RemoveFromCart(int itemId)
+        {
+            if (itemId == 0) return false;
+
+            try
+            {
+                var db = database.Connection;
+                var cartItem = db.Get<Cart>(itemId);
+
+                if (cartItem.Quantity > 1)
+                {
+                    int decreasedQty = cartItem.Quantity--;
+
+                    db.Query<Cart>(
+                        $"UPDATE Cart SET Quantity = '{decreasedQty}' WHERE Id = '{itemId}'"
+                    );
+                }
+                else
+                {
+                    db.Delete<Cart>(itemId);
+                }
+            } catch
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public Cart GetCartItemByOffer(Offer offer)
         {
             var cartList = database.Connection.Query<Cart>($"select * from Cart where RemoteItemId = '{offer.id}';");

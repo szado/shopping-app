@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using ShoppingApp.ViewModels;
+using ShoppingApp.Models.Database;
 
 namespace ShoppingApp.Views
 {
@@ -23,25 +24,42 @@ namespace ShoppingApp.Views
             BindingContext = viewModel = new CartViewModel();
         }
 
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            if (e.Item == null)
-                return;
-
-            var it = e.Item;
-
-            //Deselect Item
-            ((ListView)sender).SelectedItem = null;
-        }
-
         async void Cart_RemoveItem(object sender, EventArgs e)
         {
-            await DisplayAlert("Usuwanie", "Przedmiot usunięty", "OK");
+            int cartItemId;
+            bool deleted = true;
+            Button btn = (Button)sender;
+
+            try
+            {
+                Int32.TryParse(btn.CommandParameter.ToString(), out cartItemId);
+                deleted = viewModel.RemoveCartItem(cartItemId);
+            } catch
+            {
+                deleted = false;
+            }
+
+            if (deleted)
+            {
+                await DisplayAlert("Usuwanie", "Usunięto przedmiot z koszyka", "OK");
+            } else
+            {
+                await DisplayAlert(
+                    "Usuwanie", 
+                    "Nie udało się usunąć przedmiotu z koszyka. Spróbuj ponownie.", 
+                    "OK"
+                );
+            }
         }
 
         async void Cart_Close(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
+        }
+
+        private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+
         }
     }
 }
