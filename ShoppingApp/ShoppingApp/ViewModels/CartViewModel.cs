@@ -16,8 +16,14 @@ namespace ShoppingApp.ViewModels
         {
             Title = "Koszyk";
 
+            Items = getCartItems();
+        }
+
+        public TableQuery<Cart> getCartItems()
+        {
             var app = App.Current as App;
-            Items = app.Database.Connection.Table<Cart>();
+
+            return app.Database.Connection.Table<Cart>();
         }
         
         public bool RemoveCartItem(int cartItemId)

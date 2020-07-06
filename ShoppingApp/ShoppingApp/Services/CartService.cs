@@ -58,7 +58,7 @@ namespace ShoppingApp.Services
 
                 if (cartItem.Quantity > 1)
                 {
-                    int decreasedQty = cartItem.Quantity--;
+                    int decreasedQty = cartItem.Quantity - 1;
 
                     db.Query<Cart>(
                         $"UPDATE Cart SET Quantity = '{decreasedQty}' WHERE Id = '{itemId}'"

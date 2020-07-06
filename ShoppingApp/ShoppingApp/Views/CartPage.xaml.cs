@@ -41,6 +41,9 @@ namespace ShoppingApp.Views
 
             if (deleted)
             {
+                cartListView.ItemsSource = null;
+                cartListView.ItemsSource = viewModel.getCartItems();
+
                 await DisplayAlert("Usuwanie", "Usunięto przedmiot z koszyka", "OK");
             } else
             {
