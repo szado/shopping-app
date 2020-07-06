@@ -23,7 +23,7 @@ namespace ShoppingApp.Services
             {
                 cartItem = new Cart()
                 {
-                    Quantity = 1,
+                    Quantity = quantity,
                     RemoteItemId = offer.id,
                     Name = offer.title,
                     Price = float.Parse(offer.price),
