@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using ShoppingApp.Models.Database;
 using ShoppingApp.ViewModels;
 
 namespace ShoppingApp.Views
@@ -17,14 +16,11 @@ namespace ShoppingApp.Views
     {
         CartViewModel viewModel;
 
-
         public CartPage()
         {
             InitializeComponent();
 
             BindingContext = viewModel = new CartViewModel();
-
-            //MyListView.ItemsSource = Items;
         }
 
         async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -32,7 +28,7 @@ namespace ShoppingApp.Views
             if (e.Item == null)
                 return;
 
-            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
+            var it = e.Item;
 
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
