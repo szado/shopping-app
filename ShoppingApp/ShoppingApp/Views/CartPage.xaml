@@ -13,7 +13,8 @@
     <ListView x:Name="cartListView"
             ItemsSource="{Binding Items}"
             CachingStrategy="RecycleElement" 
-            RowHeight="75">
+            RowHeight="75"
+            ItemTapped="listView_ItemTapped">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>

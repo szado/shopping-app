@@ -60,9 +60,9 @@ namespace ShoppingApp.Views
             await Navigation.PopModalAsync();
         }
 
-        private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void listView_ItemTapped(ListView sender, ItemTappedEventArgs e)
         {
-
+            sender.SelectedItem = null;
         }
     }
 }
